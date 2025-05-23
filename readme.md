@@ -33,7 +33,7 @@ set-alias -name pn -value pnpm
 
 ### 2.初始化项目
 
-1. 创建pnpm-workspace.yaml文件定义工作区范围
+#### 1.创建pnpm-workspace.yaml文件定义工作区范围
 
 ~~~yaml
 packages:
@@ -47,33 +47,33 @@ packages:
   - '!**/test/**'
 ~~~
 
-2. 初始化根项目
+#### 2.初始化根项目
 
-   ~~~bash
-   pnpm init
-   ~~~
+~~~bash
+pnpm init
+~~~
 
-   配置package.json
+配置package.json
 
-   ~~~json
-   {
-     "name": "pnpm-monorepo-template",
-     "private": true,
-     "scripts": {
-       "build": "pnpm -r build",
-       "test": "pnpm -r test",
-       "lint": "pnpm -r lint"
-     },
-     "devDependencies": {
-       "typescript": "^5.0.0"
-     }
-   }
-   ~~~
+~~~json
+{
+  "name": "pnpm-monorepo-template",
+  "private": true,
+  "scripts": {
+    "build": "pnpm -r build",
+    "test": "pnpm -r test",
+    "lint": "pnpm -r lint"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
+~~~
 
-   注意：
+注意：
 
-   - private 设为 true 防止根项目被发布
-   - scripts 中的 - r 参数表示递归执行命令到所有子包
+- private 设为 true 防止根项目被发布
+- scripts 中的 - r 参数表示递归执行命令到所有子包
 
 ### 3.创建子包
 
