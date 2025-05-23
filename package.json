@@ -1,6 +1,5 @@
 {
-  "name": "pnpm-monorepo-template",
-  "private": true,
+  "name": "@blu3trap/pnpm-monorepo-template",
   "scripts": {
     "build": "pnpm -r build",
     "test": "pnpm -r test",
@@ -8,5 +7,6 @@
   },
   "devDependencies": {
     "typescript": "^5.0.0"
-  }
+  },
+  "license": "MIT"
 }
